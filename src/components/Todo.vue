@@ -1,8 +1,8 @@
 <template>
   <div class="mb-2 d-flex">
-      <div>
-        <input type="checkbox" :checked="todo.checked" @change="toggleCheckbox">
-      </div>
+        <div>
+            <input type="checkbox" :checked="todo.checked" @change="toggleCheckbox">
+        </div>
         
         <span 
             class="ml-3 flex-grow-1"
