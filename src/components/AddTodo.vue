@@ -1,8 +1,8 @@
 <template>
-    <input 
+    <input
         v-model="todoText"
-        type="text" 
-        class="w-100 p-2" 
+        type="text"
+        class="w-100 p-2"
         placeholder="Type todo"
         @keyup.enter="addTodo"
     >
@@ -17,8 +17,9 @@ export default {
     },
     methods: {
         addTodo(e) {
-            console.log(e.target.value)
-            this.$emit('add-todo', e.target.value);
+            this.$store.commit('ADD_TODO', e.target.value);
+            this.todoText = '';
+            // this.$emit('add-todo', e.target.value);
         }
     }
 }
